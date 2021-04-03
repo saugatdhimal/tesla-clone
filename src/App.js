@@ -15,9 +15,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        {isMenuOpen && <Menu />}
-        <HeaderBlock />
+        <Switch>
+          <Route path="/" exact>
+            <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            {isMenuOpen && <Menu />}
+            <HeaderBlock />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

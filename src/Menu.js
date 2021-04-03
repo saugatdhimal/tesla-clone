@@ -6,14 +6,14 @@ function Menu() {
   return (
     <div className="menu">
       <div className="menu__hidden">
-      <MenuItem title="Model S" />
-      <MenuItem title="Model 3" />
-      <MenuItem title="Model x" />
-      <MenuItem title="Model y" />
-      <MenuItem title="solar roof" />
-      <MenuItem title="solar panels" />
-      <MenuItem title="shop" />
-      <MenuItem title="tesla account" />
+        <MenuItem title="Model S" />
+        <MenuItem title="Model 3" />
+        <MenuItem title="Model x" />
+        <MenuItem title="Model y" />
+        <MenuItem title="solar roof" />
+        <MenuItem title="solar panels" />
+        <MenuItem title="shop" />
+        <MenuItem title="tesla account" />
       </div>
       <MenuItem title="existing inventory" />
       <MenuItem title="used inventory" />
