@@ -1,9 +1,12 @@
 .headerBlock{
-    background: url('https://tesla.com/ns_videos/model-3-social.jpg') no-repeat center center fixed;
+    height: 100%;
+    background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/32e5e0f3-5c04-42ef-8f8f-c6b1c26f8a9e/bvlatuR/std/2880x1800/ms-main-hero-desktop') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     right: 0;
@@ -16,7 +19,7 @@
 .headerBlock__info{
     display: flex;
     flex-direction: column;
-    height: 380px;
+    height: 450px;
 }
 
 .headerBlock__infoText{
@@ -47,13 +50,14 @@
 }
 
 .headerBlock__actions {
-    margin-top: 330px;
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
 .headerBlock__actions > button {
-    width: 250px;
+    width: 80vw;
     padding: 12px 0;
     outline: none;
     border: none;
@@ -75,4 +79,14 @@
     background-color: white;
     color: 393c41;
     opacity: 0.7;
+}
+
+@media screen and (min-width: 600px) {
+    .headerBlock__actions {
+        flex-direction: row;
+    }
+
+    .headerBlock__actions > button {
+        width: 250px;
+    }
 }
