@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Menu.css";
 import MenuItem from "./MenuItem";
 
@@ -13,7 +14,9 @@ function Menu() {
         <MenuItem title="solar roof" />
         <MenuItem title="solar panels" />
         <MenuItem title="shop" />
+        <Link to="/login">
         <MenuItem title="tesla account" />
+        </Link>
       </div>
       <MenuItem title="existing inventory" />
       <MenuItem title="used inventory" />

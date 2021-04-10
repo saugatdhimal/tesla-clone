@@ -10,8 +10,13 @@ import {
 import Menu from "./Menu";
 import HeaderBlock from "./HeaderBlock";
 import Login from "./Login";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
+import Signup from "./Signup";
+import TeslaAccount from "./TeslaAccount";
 
 function App() {
+  const user = useSelector(selectUser);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <Router>
@@ -23,7 +28,23 @@ function App() {
             <HeaderBlock />
           </Route>
           <Route path="/login">
-            <Login />
+            {user ? <Redirect to="/teslaaccount" /> : <Login />}
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/teslaaccount">
+            {!user ? (
+              <Redirect to="/login" />
+            ) : (
+              <>
+              <TeslaAccount
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
+              {isMenuOpen && <Menu />}
+              </>
+            )}
           </Route>
         </Switch>
       </div>

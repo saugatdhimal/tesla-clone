@@ -29,6 +29,10 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.menu  a {
+  text-decoration: inherit;
+  color: inherit;
+}
 @media screen and (min-width: 1200px) {
   .menu__hidden {
     display: none;
