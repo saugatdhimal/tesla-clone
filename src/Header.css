@@ -37,6 +37,7 @@
   .header__links {
     display: flex;
     gap: 20px;
+    margin-left: 150px;
   }
 
   .header__links > a {
