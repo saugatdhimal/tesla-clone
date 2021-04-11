@@ -6,9 +6,10 @@ import { auth } from "./firebase";
 import "./TeslaAccount.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import Car from "./Car";
 
 function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
-  const user = useSelector(selectUser)
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const history = useHistory();
   const logoutOfApp = () => {
@@ -24,7 +25,7 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
     <div className="teslaAccount">
       <div className="teslaAccount__header">
         <div className="teslaAccount__logo">
-          <Link>
+          <Link to="/">
             <img
               src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png"
               alt=""
@@ -39,7 +40,7 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
           <Link to="/teslaaccount">Solar Panels</Link>
         </div>
         <div className="teslaAccount__right">
-        <Link to="/teslaaccount">Shop</Link>
+          <Link to="/teslaaccount">Shop</Link>
           <Link to="/teslaaccount">Tesla Account</Link>
           <Link onClick={logoutOfApp}>Log out</Link>
           <div
@@ -54,16 +55,27 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
           </div>
         </div>
       </div>
-      <div className='teslaAccount__info'>
-        <div className='teslaAccount__person'>
+      <div className="teslaAccount__info">
+        <div className="teslaAccount__person">
           <h4>{user?.displayName + "'s"} Tesla</h4>
         </div>
-        <div className='teslaAccount__infoRight'>
+        <div className="teslaAccount__infoRight">
           <Link>Home</Link>
           <Link>Charging</Link>
           <Link>Setting</Link>
           <Link onClick={logoutOfApp}>Sign out</Link>
         </div>
+      </div>
+      <div className="teslaAccount__cars">
+        <Car
+          imgSrc="https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models.jpg?20170815"
+          model="model s"
+          testDrive
+        />
+        <Car
+          imgSrc="https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx.jpg?20170815"
+          model="model x"
+        />
       </div>
     </div>
   );

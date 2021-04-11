@@ -1,3 +1,8 @@
+.teslaAccount {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
 .teslaAccount__header {
     display: flex;
     justify-content: space-between;
@@ -44,6 +49,7 @@
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .teslaAccount__person > h4 {
@@ -79,14 +85,19 @@
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
+    .teslaAccount__menu {
+      padding-right: 20px;
+    }
     .teslaAccount__info {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       padding-top: 30px;
-      padding-bottom: 30px;
+      padding-bottom: 10px;
+      width: 75vw;
+      align-self: center;
     }
     
     .teslaAccount__person > h4 {
@@ -107,6 +118,11 @@
       transition: all 0.2s;
       text-transform: capitalize;
     }
+
+    .teslaAccount__cars {
+      width: 75vw;
+      align-self: center;
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -114,6 +130,7 @@
         display: flex;
         gap: 20px;
         align-items: center;
+        margin-left: 230px;
       }
       
       .teslaAccount__links > a {

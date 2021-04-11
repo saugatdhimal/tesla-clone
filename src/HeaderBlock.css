@@ -1,6 +1,6 @@
 .headerBlock{
     height: 100%;
-    background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/32e5e0f3-5c04-42ef-8f8f-c6b1c26f8a9e/bvlatuR/std/2880x1800/ms-main-hero-desktop') no-repeat center center fixed;
+    background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/676da95d-942e-414c-8534-f1832f0d4ced/bvlatuR/std/3296x1798/ms-homepage-desktop') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,7 +19,7 @@
 .headerBlock__info{
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height: 430px;
 }
 
 .headerBlock__infoText{
@@ -70,9 +70,9 @@
 }
 
 .headerBlock__buttonPrimary {
-    background-color: #393c41;
+    background-color: black;
     color: white;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .headerBlock__buttonSecondary {
@@ -84,6 +84,7 @@
 @media screen and (min-width: 600px) {
     .headerBlock__actions {
         flex-direction: row;
+        margin-top: 350px;
     }
 
     .headerBlock__actions > button {

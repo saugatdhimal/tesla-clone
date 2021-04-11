@@ -1,7 +1,7 @@
 import React from 'react'
 import './ButtonSecondary.css'
 
-function ButtonSecondary({name, type, onClick}) {
+function ButtonSecondary({name}) {
     return (
         <button className="buttonSecondary">
             {name}

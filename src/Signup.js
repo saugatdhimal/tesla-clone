@@ -5,6 +5,8 @@ import LanguageOutlinedIcon from "@material-ui/icons/LanguageOutlined";
 import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
 import { login } from "./features/userSlice";
+import ButtonPrimary from "./ButtonPrimary";
+import ButtonSecondary from "./ButtonSecondary";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -91,15 +93,13 @@ function Signup() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" onClick={signUp}>
-            Create Account
-          </button>
+          <ButtonPrimary type="submit" name="Create Account" onClick={signUp} />
         </form>
         <div className="signup__divider">
           <hr /> <span>OR</span> <hr />
         </div>
         <Link to="/login">
-          <button>Sign In</button>
+          <ButtonSecondary name="Sign In" />
         </Link>
         <div className="signup__footer">
           <p>Tesla &copy; 2021</p>

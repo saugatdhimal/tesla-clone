@@ -83,25 +83,6 @@
   transition: all 0.2s;
 }
 
-.signup__form > button {
-  background-color: #3e6ae1;
-  border: none;
-  padding: 12px 40px;
-  border-radius: 50px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  margin-bottom: 20px;
-  transition: all 0.4s;
-  text-align: center;
-}
-
-.signup__form > button:hover {
-  background-color: #3457b1;
-}
-
 .signup__divider {
   display: flex;
   justify-content: space-between;
@@ -119,26 +100,6 @@
   font-weight: 600;
   font-size: 14px;
   color: #5c5e62;
-}
-
-.signup__info > a > button {
-  background-color: transparent;
-  border: 3px solid #171a20;
-  width: 100%;
-  padding: 10px 40px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  color: #5c5e62;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  outline: none;
-}
-
-.signup__info > a > button:hover {
-  background-color: #171a20;
-  color: white;
-  text-align: center;
 }
 
 .signup__footer {
